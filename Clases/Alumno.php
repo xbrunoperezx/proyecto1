@@ -83,11 +83,9 @@ class Alumno extends Miembro {
     public function matricularseEnAsignatura($asignatura){
         if(in_array($asignatura, $this->asignaturas)){
             $this->asignaturas[]=$asignatura;
-            echo "Matriculado en la asignatura: ". $asignatura->getNombre();
-        } else {
-            echo "Alumno ya esta matriculado".$asignatura->getNombre(). " \n ";
-        }
+           
 
+        }
     }
   
  // creamos la funcion de dar de baja en asignatura al alumno
