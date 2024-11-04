@@ -1,4 +1,5 @@
 <?php
+include_once'Clases/Miembro.php';
 //creamos ahora la subclase Profesor
 class Profesor extends Miembro {
     private $titular;
@@ -8,8 +9,19 @@ class Profesor extends Miembro {
     public function __construct($id, $nombre, $apellidos, $email, $asignatura){
         parent::__construct($id, $nombre, $apellidos, $email);
         $this->asignatura=$asignatura;
+        $this->titular=false;
 
     }
+
+    /**
+     * Get the value of asignatura
+     */
+    public function getAsignatura()
+    {
+        return $this->asignatura;
+    }
+
+
 
 // creaamos el metodo estatico para los datos de los profesores
 

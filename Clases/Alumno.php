@@ -1,5 +1,5 @@
 <?php
-
+include_once'Clases/Miembro.php';
 // creaamos una nueva clase Alumno que heredara los atributos de la clase padre
 class Alumno extends Miembro {
     private $asignaturas;
@@ -8,11 +8,11 @@ class Alumno extends Miembro {
 
 // creamos constructor cogiendo los atributos de la clase padre e implmentando los de Alumno
 //tambien quitamos el atributo $cursoAbonado del cosntructor
-    public function __construct($id, $nombre, $apellidos, $email, $edad) {
-        parent::__construct($id, $nombre, $apellidos, $email, );
+    public function __construct($id, $nombre, $apellidos, $email, $edad,$cursoAbonado=false) {
+        parent::__construct($id, $nombre, $apellidos, $email );
         //creo el array vacio de asignaturas
         $this->asignaturas = [];
-        //$this->cursoAbonado = $cursoAbonado; quito curso abonado por que no lo tengo q mostrar
+        $this->cursoAbonado = $cursoAbonado; 
         $this->edad = $edad;
     }
 
@@ -36,24 +36,7 @@ class Alumno extends Miembro {
         return $this;
     }
 
-    /**
-     * Get the value of cursoAbonado
-     */
-    public function getCursoAbonado()
-    {
-        return $this->cursoAbonado;
-    }
-
-    /**
-     * Set the value of cursoAbonado
-     */
-    public function setCursoAbonado($cursoAbonado): self
-    {
-        $this->cursoAbonado = $cursoAbonado;
-
-        return $this;
-    }
-
+   
     /**
      * Get the value of edad
      */
@@ -75,7 +58,7 @@ class Alumno extends Miembro {
 
     // creamos metodo de abonar curso que nos diga si a abonado o no el alumno
     public function abonarCurso(){
-        $this->cursoAbonado=true;
+        $cursoAbonado=true;
         echo "El curso esta abonado. \n";
     }
 

@@ -1,5 +1,5 @@
 <?php
-
+include_once'Clases/Miembro.php';
 // creando una  nueva clase  diferente  a las de antes esta no hereda nada
 class Asignatura {
     private $id;
