@@ -63,8 +63,8 @@ class Alumno extends Miembro {
     }
 
 // creamos otra funcion para el alumno  matricularse en asignatura (no se matricular dos veces en la misma asignatura)
-    public function matricularseEnAsignatura($asignatura){
-        if(in_array($asignatura, $this->asignaturas)){
+    public function matricularEnAsignatura($asignatura){
+        if(!in_array($asignatura, $this->asignaturas)){
             $this->asignaturas[]=$asignatura;
            
 
