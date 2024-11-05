@@ -64,6 +64,10 @@ $alumnos[7]->matricularEnAsignatura($asignaturas[2]);
 $alumnos[8]->matricularEnAsignatura($asignaturas[1]);  
 $alumnos[9]->matricularEnAsignatura($asignaturas[0]);
 
+
+
+
+
 // filtrado para alumnos con almenos dos asignaturas
 // llamo a la funcion count para contar el numero de  alumnos de ese array con almenos dos asignaturas
 
@@ -73,10 +77,32 @@ $filtro2=array_filter($alumnos,function($alumno){
 });
 
 
-//imprimir los datos
+//imprimir los datos que filtramos anteriormente
 
 echo "<h2> Alumnos con almenos dos asignaturas </h2>";
 foreach($filtro2 as $alumno){
     echo "<li>" ." Nombre: ".$alumno->getNombre(). " ".$alumno->getApellidos(). " Email: ".$alumno->getEmail()."</li>";
 }
+
+// vamos a crear las asignaturas con algun alumno matriculado
+//creamos array vacia para meter ahi los alumnos,
+$asignaturaM=[];
+
+foreach($alumnos as $alumno){
+    foreach($alumno->getAsignaturas() as $asignaturas){
+        if(!in_array($asignaturas, $asignaturaM)){
+            $asignaturaM[]=$asignaturas;
+        }
+    }
+}
+
+//mostrando la lista de asignaturas que filtramos anteriormente
+
+echo "<h2> Asignaturas con algun alumno matriculado </h2>";
+
+foreach($asignaturaM as $totete3){
+    echo "<li>"."Nombre".$totete3->getNombre().", Creditos".$totete3->getCreditos();
+    
+}
+
 ?>
