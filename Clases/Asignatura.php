@@ -8,7 +8,7 @@ class Asignatura {
 
 
 // creamos su constructor por parametros
-    public function _construct($id, $nombre, $creditos){
+    public function __construct($id, $nombre, $creditos){
         $this->id =$id;
         $this->nombre =$nombre;
         $this->creditos =$creditos;
@@ -59,20 +59,20 @@ class Asignatura {
         $this->creditos = $creditos;
     }
 
-// creando el metodo tostring
-    public function __toString() {
-        return "Asignatura {id: $this->id, nombre: $this->nombre, creditos: $this->creditos}";
-    }
+
 
  // creando el metido ESTATICO  para guardar los datos de la asignaturas en su correspondiente Array
  
     public static function crearAsignaturasDeMuestra (){
-        $asignaturas = [];
-        $asignaturas [] = new Asignatura(1, "DWES", 7 );
-        $asignaturas [] = new Asignatura(2, "DWEC", 6 );
-        $asignaturas [] = new Asignatura(3, "DIW", 4 );
-        $asignaturas [] = new Asignatura(4, "DAW", 4);
-        return $asignaturas;
+     return[
+        new Asignatura(1, "DWES", 7 ),
+        new Asignatura(2, "DWEC", 6 ),
+         new Asignatura(3, "DIW", 4 ),
+        new Asignatura(4, "DAW", 4)
+
+     ] ;  
+        
+       
     }
 
 

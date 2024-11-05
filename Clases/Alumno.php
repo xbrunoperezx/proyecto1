@@ -77,7 +77,7 @@ class Alumno extends Miembro {
     }
 
  // ahora creamos la funcion estatica para meter los datos de cada alumno   
-    public static function crearAlumnosDeMuestra(){
+    public static function crearAlumnosDeMuestra($asignaturas){
         //declaro un array vacio, que luego creare los alumnos
         $alumnos = [];
         //ahora creo el array de los datos de cada alumno

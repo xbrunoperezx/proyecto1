@@ -25,7 +25,7 @@ class Profesor extends Miembro {
 
 // creaamos el metodo estatico para los datos de los profesores
 
-public static function crearProfesoresDeMuestra(){
+public static function crearProfesoresDeMuestra($asignaturas){
     $profesores = [];
     $profesores []= new Profesor(1, "Steve", "Wozniak", "steve@apple.com", "DWES");
     $profesores []= new Profesor(2, "Ada", "Lovelace", "ada@gmail.com", "DIW");
