@@ -16,21 +16,21 @@ $asignaturas= Asignatura:: crearAsignaturasDeMuestra();
 echo "<h2> Alumnos </h2> ";
 
 foreach($alumnos as $totete){
-    echo "<li>" ." Nombre: ".$totete->getNombre(). " ".$totete->getApellidos(). " Email: ".$totete->getEmail()."</li>";
+    echo "<li>" ." Nombre: ".$totete->getNombre(). " ".$totete->getApellidos()." , ". " Email: ".$totete->getEmail()."</li>";
 }
 
 //listar profesores
 echo "<h2> Profesores </h2>";
 
 foreach($profesores as $totete1){
-    echo "<li>". "Nombre: ".$totete1->getNombre()."Email:".$totete1->getEmail()."</li>";
+    echo "<li>". "Nombre: ".$totete1->getNombre()." ".$totete1->getApellidos()." , ". "Email: ".$totete1->getEmail()."</li>";
 }
 
 //listar asignaturas
 echo "<h2> Asignaturas </h2>";
 
 foreach($asignaturas as $totete2){
-    echo "<li>" ."Nombre: ".$totete2->getNombre()."creditos: ".$totete2->getCreditos()."</li>";
+    echo "<li>" ."Nombre: ".$totete2->getNombre()." , ". " creditos: ".$totete2->getCreditos()."</li>";
 }
 
 //filtrado DE ALUMNOS QUE TENGAN <=23 AÑOS
@@ -42,7 +42,7 @@ $filtro=array_filter($alumnos,function($alumno){
 //mostrar los alumnos menores de esa edad
 echo "<h2> Alumnos <=23 </h2>";
 foreach($filtro as $alumno){
-    echo "<li>" ." Nombre: ".$alumno->getNombre(). " ".$alumno->getApellidos(). " Email: ".$alumno->getEmail()."</li>";
+    echo "<li>" ." Nombre: ".$alumno->getNombre(). " ".$alumno->getApellidos()." , ". " Email: ".$alumno->getEmail()."</li>";
 }
 
 
@@ -81,7 +81,7 @@ $filtro2=array_filter($alumnos,function($alumno){
 
 echo "<h2> Alumnos con almenos dos asignaturas </h2>";
 foreach($filtro2 as $alumno){
-    echo "<li>" ." Nombre: ".$alumno->getNombre(). " ".$alumno->getApellidos(). " Email: ".$alumno->getEmail()."</li>";
+    echo  "<li>" ." Nombre: ".$alumno->getNombre(). " ".$alumno->getApellidos()." , ". " Email: ".$alumno->getEmail()."</li>";
 }
 
 // vamos a crear las asignaturas con algun alumno matriculado
