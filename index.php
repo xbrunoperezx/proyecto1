@@ -23,14 +23,14 @@ foreach($alumnos as $totete){
 echo "<h2> Profesores </h2>";
 
 foreach($profesores as $totete1){
-    echo "Nombre: ".$totete1->getNombre()."Email:".$totete1->getEmail();
+    echo "<li>". "Nombre: ".$totete1->getNombre()."Email:".$totete1->getEmail()."</li>";
 }
 
 //listar asignaturas
 echo "<h2> Asignaturas </h2>";
 
 foreach($asignaturas as $totete2){
-    echo "Nombre: ".$totete2->getNombre()."creditos: ".$totete2->getCreditos();
+    echo "<li>" ."Nombre: ".$totete2->getNombre()."creditos: ".$totete2->getCreditos()."</li>";
 }
 
 //filtrado DE ALUMNOS QUE TENGAN <=23 AÑOS
