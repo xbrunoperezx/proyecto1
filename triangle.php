@@ -12,6 +12,7 @@
   
  $triangulo = new TriangleGenerator();
  echo $triangulo->generatetriangle(7);
+ 
   
  ?>
 </body>
